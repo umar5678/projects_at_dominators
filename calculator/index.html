@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculater</title>
+</head>
+<body class="bg-gray-200 p-4">
+
+    <div class=" mx-auto max-w-screen-xl  flex flex-row flex-wrap items-center sm:justify-between justify-center">
+        <!-- Left box for user guide -->
+        <div class="flex flex-col border sm:w-max w-80 border-gray-300 p-2">
+            <h2 class="text-lg font-bold mb-2">User Guide</h2>
+            <ul class="list-disc">
+                <li>This is a very basic calculator with limited functionalities.</li>
+                <li>You can perform + , - , *, / </li>
+                <li>To get the square root of any number: enter <strong>√number</strong> , <strong>√25 = 5</strong> <br> Other statements might give an error</li>
+                <li>To get the % of any numbe Use: <strong>number %of number</strong>  <br> Ex: <strong>25 %of 300 = 75</strong> </li>
+                <li>Use "C" to clear the display.</li>
+            </ul>
+        </div>
+
+        <!-- central box for calculater -->
+
+        <div class="bg-white rounded-lg p-4 shadow-md mt-16">
+
+            <div class="text-right text-gray-700 font-bold text-2xl">
+                <span id="display">0</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 mt-4">
+                <button id="btn" class="bg-gray-200 rounded-lg p-2  hover:bg-gray-300 font-semibold text-blue-600">%of</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">√</button>
+                <button id="clearBtn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-red-300">C</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">/</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">7</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">8</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">9</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">*</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">4</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">5</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">6</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">-</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">1</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">2</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">3</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">+</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">0</button>
+                <button id="btn" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-gray-300">.</button>
+                <button id="getResults" class="bg-gray-200 rounded-lg p-2 text-gray-700 hover:bg-green-400 col-span-2">=</button>
+            </div>
+        </div>
+        <!-- right box for history -->
+        <div class="flex flex-col border max-w-80 border-gray-300 p-4 h-96 overflow-scroll">
+            <div class="flex flex-row items-center justify-between  gap-2">
+
+                <h2 class="text-lg font-bold mb-2">History</h2> <span class="bg-orange-300 hover:bg-orange-400 px-2 py-1 rounded-lg " id="clearHistory">Clear</span>
+            </div>
+                <ul id="historyList" class="list-disc">
+                </ul>
+                
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
